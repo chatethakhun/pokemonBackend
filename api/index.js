@@ -17,9 +17,9 @@ app.get('/pokemons', (req, res) => {
 app.get('/pokemons/:id', (req, res) => {
   readPokemon((data) => {
     if(req.params.id) {
-      const pokemonId = !isNaN(parseInt(req.params.id)) ? req.params.id :  pokemon.getId(req.params.id)
-      const pokemon = data.find(pokemon => parseInt(pokemon.id) === parseInt(pokemonId))
-      res.json({ pokemon })
+      const pokemonId = !isNaN(parseInt(req.params.id)) ? parseInt(req.params.id) :  pokemon.getId(req.params.id)
+      const pokemonData = data.find(pokemon => parseInt(pokemon.id) === pokemonId)
+      res.json({ pokemonData })
     } else {
       res.json({ message: 'please send id'})
     }

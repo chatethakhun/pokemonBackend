@@ -1,5 +1,8 @@
 {
   "version": 2,
+  "builds": [
+      { "src": "**/*.js", "use": "@now/node" }
+  ],
   "routes": [
     {
       "src": "/.*",
@@ -12,7 +15,7 @@
     }
   ],
   "functions": {
-    "index.js": {
+    "api/index.js": {
       "includeFiles": "csv/**"
     }
   }

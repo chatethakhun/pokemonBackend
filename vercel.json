@@ -13,5 +13,10 @@
       },
       "dest": "/index.js"
     }
-  ]
+  ],
+  "functions": {
+    "index.js": {
+      "includeFiles": "csv/**"
+    }
+  }
 }

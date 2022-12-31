@@ -35,3 +35,5 @@ app.get('/pokemons', (req, res) => {
 app.listen(port, () => {
   console.log("Starting node.js at port " + port);
 }); 
+
+module.exports = app;

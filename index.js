@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
 app.get('/pokemons', (req, res) => {
   const data = [];
 
-  fs.createReadStream("./pokemonData.csv")
+  fs.createReadStream("./csv/pokemonData.csv")
     .pipe(
       parse({
         delimiter: ",",
